@@ -1,3 +1,15 @@
-<main>
-    <h1>Hello from Angular App with Webpack</h1>
-</main>
+<!-- <h1>{{title}}</h1> -->
+<div class="main">
+    <h1>Items list</h1>
+    <div class="addItem">
+        <!-- <input placeholder="Add Item" value={{newItem}} class="addText"> -->
+        <input [(ngModel)] = "newItem" placeholder="Add Item" class="addText">
+        <button (click) = "pushItem()">Add</button>
+    </div>
+    <ul>
+        <li *ngFor = "let i of items; let ind = index">
+            {{i}}
+            <span (click) = "removeItem(ind)">x</span>
+        </li>
+    </ul>
+</div>
