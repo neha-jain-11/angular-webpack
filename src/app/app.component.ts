@@ -11,16 +11,16 @@ export class AppComponent {
 
   // title = "App starts";
 
-  items = ["Angular 4", "React", "Backbone"];
-  newItem = "";
-  pushItem = function () {
+  public items : [string]= ["Angular 4", "React", "Backbone"];
+  public newItem : string = "";
+  public pushItem = function () {
     if (this.newItem !== "") {
       this.items.push(this.newItem);
       this.newItem = "";
     }
   }
 
-  removeItem = function (index : number) {
+  public removeItem = function (index : number) {
     this.items.splice(index, 1);
   }
 
